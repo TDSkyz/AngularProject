@@ -28,6 +28,7 @@ export class BookingDashboardComponent implements OnInit {
   ngOnInit() {
     this.loadAllBookings();
   }
+
   loadAllBookings(){
     this.subscription = this.bookingService.getAllBookings().subscribe((bookings: Booking[]) => {
       this.bookings = bookings;
@@ -44,6 +45,7 @@ export class BookingDashboardComponent implements OnInit {
     
     this.bookingToAdd.setEmpty();
   }
+  
   deleteBooking(id: number){
     var answer = window.confirm(`Delete Booking ID ${id} ??`)
     if (answer) {
@@ -52,6 +54,7 @@ export class BookingDashboardComponent implements OnInit {
       });
     }
   }
+  
   passEditParams(booking: Booking){
     this.bookingToEdit.booking_id = booking.booking_id;
     this.bookingToEdit.user_id = booking.user_id;
