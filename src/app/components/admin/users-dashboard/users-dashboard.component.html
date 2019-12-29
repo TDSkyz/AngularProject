@@ -3,6 +3,7 @@
     <tr>
       <th>User ID</th>
       <th>User Name</th>
+      <th>Role</th>
       <th>Handle</th>
 
     </tr>
@@ -11,6 +12,7 @@
     >
       <td>{{user.user_id}}</td>
       <td>{{user.username}}</td>
+      <td>{{user.role}}</td>
 
       <td>
         <button type="button" data-toggle="modal" data-target="#editModal" (click)= "passEditParams(user)"><i class="fas fa-edit"></i></button>
